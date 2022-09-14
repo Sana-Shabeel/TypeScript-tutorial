@@ -1,3 +1,3 @@
 # Typescript Tutorial
 
-![sdofhsæd](./Thumbnail.jpeg)
+![sdofhsæd](./images/Thumbnail.jpeg)
