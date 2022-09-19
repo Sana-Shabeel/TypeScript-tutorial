@@ -1,7 +1,20 @@
-// The main goal is to get the errors during development so we can easily them
+// const person: {
+//   name: string;
+//   age: number;
+// } =
+const person = {
+  name: "John",
+  age: 36,
+  hobbies: ["Sports", "Cooking"],
+};
 
-function add(n1: number, n2: number) {
-  return n1 + n2;
+// let the var numbers be a number array
+let numbers: number[];
+
+numbers = [2];
+
+console.log(person);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toLocaleUpperCase()); // cause typescript knows that hobby is a string
 }
-
-console.log(add(5, 2));
