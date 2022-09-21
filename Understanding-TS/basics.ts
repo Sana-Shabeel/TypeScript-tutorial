@@ -9,8 +9,19 @@ Type Inference
 
 */
 
-function add(n1: number, n2: number) {
-  return n1 + n2;
+// CORE TYPES
+
+// String
+
+const myName: string = "Anas";
+const isMale: boolean = true;
+const age: number = 20;
+
+function add(name: string, age: number, isMale: boolean) {
+  if (isMale) {
+    return `${name} is a male at the age of ${age}. He will soon be ${age + 1}`;
+  }
+  return `${name} is not a male`;
 }
 
-console.log(add(5, 2));
+console.log(add(myName, age, isMale));
