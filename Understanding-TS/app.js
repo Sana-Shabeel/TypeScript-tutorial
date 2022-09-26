@@ -17,4 +17,13 @@ function padLeft(value, padding) {
     }
     throw new Error("Expected string or number, got '".concat(typeof padding, "'."));
 }
-console.log(padLeft("Hello world", 4));
+console.log(padLeft("Hello world", 5));
+function combine(ip1, ip2) {
+    // Operator '+' cannot be applied to types 'string | number' and 'string | number'.ts(2365)
+    // return ip + ip2;
+    if (typeof ip1 === "number" && typeof ip2 === "number") {
+        return ip1 + ip2;
+    }
+    return ip1.toString() + ip2.toString();
+}
+console.log(combine("an", "as"));
