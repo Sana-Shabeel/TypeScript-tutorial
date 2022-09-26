@@ -9,6 +9,12 @@ Occasionally, you’ll run into a library that expects a parameter to be either 
  
 */
 function padLeft(value, padding) {
-    return value + "-".repeat(padding);
+    if (typeof padding === "number") {
+        return Array(padding + 1).join(" ") + value;
+    }
+    if (typeof padding === "string") {
+        return padding + value;
+    }
+    throw new Error("Expected string or number, got '".concat(typeof padding, "'."));
 }
 console.log(padLeft("Hello world", 4));
